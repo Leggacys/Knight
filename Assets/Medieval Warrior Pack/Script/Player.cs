@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,11 @@ public class Player : MonoBehaviour
     public Joystick joystick;
     public float speed;
     public Button atack;
+    public LayerMask enemyLayers;
+    public Transform HitPoint;
+    public float atackRange;
+    public int damage;
+    public int health;
    
     //Private Variable
     private Animator _anim;
@@ -67,6 +73,7 @@ public class Player : MonoBehaviour
     {
    
         _anim.SetTrigger("Atack");
+        Touched();
     }
 
     public void Interactable()
@@ -78,6 +85,7 @@ public class Player : MonoBehaviour
     {
         Interactable();
         _press = 0;
+        Touched();
         _anim.SetTrigger("Atack2");
 
     }
@@ -85,5 +93,29 @@ public class Player : MonoBehaviour
     public void Make0()
     {
         _press = 0;
+    }
+
+    public void Touched()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(HitPoint.position, atackRange, enemyLayers);
+        foreach(var e in enemies)
+        {
+            e.GetComponent<IHitit>().TakeDamage(damage);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(HitPoint.position, atackRange);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        _anim.SetTrigger("Hit");
+        health -= damage;
+        if(health<=0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
