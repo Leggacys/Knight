@@ -7,8 +7,9 @@ using UnityEngine;
 public class Houses : MonoBehaviour
 {
     // Public Variable
-    public float area;
-    public float dimension;
+    public float areaMax;
+    public float areaMin;
+    
     //Private Variable
     private bool complete = false;
     private GameObject _player;
@@ -20,13 +21,13 @@ public class Houses : MonoBehaviour
 
     public void Update()
     {
-        if (Math.Abs(_player.transform.position.x) - dimension > area)
+        if (_player.transform.position.x<areaMax&&_player.transform.position.x>areaMin)
         {
-            Area(false);
+            Area(true);
         }
         else
         {
-            Area(true);
+            Area(false);
         }
     }
 

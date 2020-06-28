@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraMov : MonoBehaviour
 {
@@ -19,7 +15,7 @@ public class CameraMov : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,9 +24,8 @@ public class CameraMov : MonoBehaviour
         UnityEngine.Vector3 desirePosition = target.position + offset;
         UnityEngine.Vector3 smoothLerp = UnityEngine.Vector3.Lerp(transform.position, desirePosition, _smoothSpeed);
         transform.position = smoothLerp;
-         
     }
 
-    
+
 
 }

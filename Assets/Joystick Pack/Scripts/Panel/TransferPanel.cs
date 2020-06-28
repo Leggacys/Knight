@@ -21,7 +21,8 @@ public class TransferPanel : MonoBehaviour
 
     IEnumerator Transition(int index)
     {
-        yield return new WaitForSeconds(1);
+        _anim.SetTrigger("End");
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(index);
     }
 }
