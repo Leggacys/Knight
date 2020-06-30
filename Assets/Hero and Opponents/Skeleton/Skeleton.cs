@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 public class Skeleton : Enemy,IHitit
 {
     //Public variable
+    public Player player;
     
     //Private variable
     private Animator _anim;
@@ -15,11 +15,15 @@ public class Skeleton : Enemy,IHitit
     {
         base.Start();
         _anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
      void Update()
     {
+        if (player.health > 0)
+        {
+
         if (Vector2.Distance(transform.position, _player.transform.position) > distance)
         {
             _anim.SetBool("Walk", true);
@@ -34,6 +38,7 @@ public class Skeleton : Enemy,IHitit
                 _finishAtack = false;
             }
         }    
+        }
     }
 
     IEnumerator Atack1()
@@ -48,11 +53,11 @@ public class Skeleton : Enemy,IHitit
     public void TakeDamage(int damage)
     {
         _anim.SetTrigger("Hitit");
+        Instantiate(hitSound, transform.position, transform.rotation);
         health -= damage;
         if(health<=0)
         {
-            _anim.SetTrigger("Dead");
-            
+            StartCoroutine(Dead());
         }
     }
 
@@ -70,8 +75,12 @@ public class Skeleton : Enemy,IHitit
         Gizmos.DrawWireSphere(hitPoint.position, radius);
     }
 
-    public void Dead()
+    public IEnumerator Dead()
     {
+        _anim.SetTrigger("Dead");
+        Instantiate(sound, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+
     }
 }

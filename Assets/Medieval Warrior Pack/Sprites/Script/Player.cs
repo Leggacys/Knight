@@ -16,16 +16,20 @@ public class Player : MonoBehaviour
     public float atackRange;
     public int damage;
     public int health;
-   
+    public GameObject transferPanel;
+    public GameObject sound;
+    public GameObject hurtSound;
     //Private Variable
     private Animator _anim;
     private bool _facingRight = true;
     private Rigidbody2D _rb;
     private int _press = 0;
+    private bool _moving = false;
     void Start()
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+       
     }
 
     // Update is called once per frame
@@ -42,10 +46,12 @@ public class Player : MonoBehaviour
         {
         _rb.velocity = new Vector3(joystick.Horizontal * speed,0, joystick.Vertical*speed);
             _anim.SetBool("Run", true);
+            sound.SetActive(true);
         }
         else
         {
             _anim.SetBool("Run", false);
+            sound.SetActive(false);
         }
     }
 
@@ -81,6 +87,12 @@ public class Player : MonoBehaviour
         atack.interactable = !atack.interactable;
     }
 
+    public void ChangeBuutonStatus()
+    {
+        if (atack.interactable == false)
+            atack.interactable =!atack.interactable;
+    }
+
     public void Atack2()
     {
         Interactable();
@@ -112,10 +124,22 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _anim.SetTrigger("Hit");
+        Instantiate(hurtSound, transform.position, transform.rotation);
         health -= damage;
         if(health<=0)
         {
-            Destroy(gameObject);
+            StartCoroutine(Death());
         }
     }
+
+     IEnumerator Death()
+    {
+        _anim.SetTrigger("Death");
+        transferPanel.GetComponent<TransferPanel>().LoadScene(1);
+        yield return new WaitForSeconds(0.7f);
+        Destroy(gameObject);
+
+    }
+
+    
 }

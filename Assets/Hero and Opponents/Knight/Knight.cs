@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knight : Enemy
+public class Knight : Enemy,IHitit
 {
     //Private variable
    private  Animator _anim;
@@ -56,8 +56,21 @@ public class Knight : Enemy
         Gizmos.DrawWireSphere(hitPoint.position, radius);
     }
 
-    public void Dead()
+    public IEnumerator Dead()
     {
+        _anim.SetTrigger("Dead");
+        yield return  new WaitForSeconds(1f);
         Destroy(gameObject);
+        
+    }
+
+    public void TakeDamage(int damage)
+    {
+        _anim.SetTrigger("Hit");
+        health -= damage;
+        if (health <= 0)
+        {
+            StartCoroutine(Dead());
+        }
     }
 }

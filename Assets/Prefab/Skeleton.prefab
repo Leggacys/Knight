@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2784536046058914002}
   m_Layer: 9
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2812528639127695424}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03cbb78f97f6cb479208d3573d1fada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeBetwenTheAtack: 4
   distance: 0.6
   speed: 0.7
   health: 10
@@ -204,8 +205,11 @@ MonoBehaviour:
     m_Bits: 256
   hitPoint: {fileID: 2812528638607491416}
   damage: 1
+  sound: {fileID: 193960756156751752, guid: 9e3ad76f4c73c68439dd737b231d4bae, type: 3}
+  hitSound: {fileID: 3324796233697576454, guid: 3609cddf5bb74e34d8086b71ff5a16c8,
+    type: 3}
   _player: {fileID: 0}
-  TimeBetwenTheAtack: 2
+  player: {fileID: 745912732900872107, guid: c72629a267998ec429c2e93837ec617d, type: 3}
 --- !u!114 &2784536046058914002
 MonoBehaviour:
   m_ObjectHideFlags: 0
