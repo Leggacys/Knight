@@ -19,12 +19,14 @@ public class Player : MonoBehaviour
     public GameObject transferPanel;
     public GameObject sound;
     public GameObject hurtSound;
+    public CoinScript coins;
     //Private Variable
     private Animator _anim;
     private bool _facingRight = true;
     private Rigidbody2D _rb;
     private int _press = 0;
     private bool _moving = false;
+    private Collider2D _coll;
     void Start()
     {
         _anim = GetComponent<Animator>();
@@ -140,6 +142,16 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
 
     }
+    void  OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "House")
+            _coll = collision;
+        
+    }
 
-    
+    public void Buy()
+     {
+        
+        _coll.GetComponent<Houses>().EnoughtMoney();
+     }
 }
