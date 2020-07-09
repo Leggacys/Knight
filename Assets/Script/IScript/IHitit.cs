@@ -6,5 +6,6 @@ public interface IHitit
 {
    void TakeDamage(int damage);
     void Touched();
-    IEnumerator Dead(); 
+    IEnumerator Dead();
+    void DropCoin();
 }

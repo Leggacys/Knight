@@ -11,10 +11,12 @@ public class Skeleton : Enemy,IHitit
     //Private variable
     private Animator _anim;
     private bool _finishAtack=true;
+    
     public override void Start()
     {
         base.Start();
         _anim = GetComponent<Animator>();
+       
         
     }
 
@@ -58,6 +60,7 @@ public class Skeleton : Enemy,IHitit
         if(health<=0)
         {
             StartCoroutine(Dead());
+            Instantiate(blod, transform.position, transform.rotation);
         }
     }
 
@@ -77,10 +80,16 @@ public class Skeleton : Enemy,IHitit
 
     public IEnumerator Dead()
     {
+        DropCoin();
         _anim.SetTrigger("Dead");
         Instantiate(sound, transform.position, transform.rotation);
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
 
+    }
+
+    public void DropCoin()
+    {
+       _moneyTable.GetComponent<CoinScript>().AddCoin(coinDrop);
     }
 }

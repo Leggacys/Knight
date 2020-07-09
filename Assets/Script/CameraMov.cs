@@ -11,7 +11,7 @@ public class CameraMov : MonoBehaviour
     public float minY;
     public float speed;
     //Private
-    private float _smoothSpeed = 1;
+   
 
     void Start()
     {

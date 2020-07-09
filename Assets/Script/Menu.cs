@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,10 +8,10 @@ public class Menu : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject canvas;
-
+    public GameObject moveCanvas;
     void Start()
     {
-       
+       moveCanvas.SetActive(false);
     }
 
     
@@ -24,6 +25,7 @@ public class Menu : MonoBehaviour
     public void Dezactivated()
     {
         canvas.SetActive(false);
+        moveCanvas.SetActive(true);
     }
 
    

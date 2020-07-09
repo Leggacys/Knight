@@ -11,10 +11,9 @@ public class Houses : MonoBehaviour,IBought
     public int price;
     public GameObject ornament;
     public GameObject civilian;
-    
+    public GameObject sound;
 
     //Private Variable
-    private bool complete = false;
     private GameObject _player;
     private bool _bought = false;
     
@@ -77,6 +76,7 @@ public class Houses : MonoBehaviour,IBought
         {
             StartCoroutine( Alpha());
             civilian.SetActive(true);
+            Instantiate(sound, transform.position, transform.rotation);
         }
         else
         {

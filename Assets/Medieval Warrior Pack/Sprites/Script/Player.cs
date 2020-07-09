@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,8 +26,8 @@ public class Player : MonoBehaviour
     private bool _facingRight = true;
     private Rigidbody2D _rb;
     private int _press = 0;
-    private bool _moving = false;
     private Collider2D _coll;
+    private bool _attack = false;
     void Start()
     {
         _anim = GetComponent<Animator>();
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
 
     private void Move()
     { 
-        if(joystick.Horizontal!=0)
+        if(joystick.Horizontal!=0&&!_attack)
         {
         _rb.velocity = new Vector3(joystick.Horizontal * speed,0, joystick.Vertical*speed);
             _anim.SetBool("Run", true);
@@ -70,7 +71,9 @@ public class Player : MonoBehaviour
 
     public void AtackBegin()
     {
+        _attack = true;
         _press++;
+
         if (_press == 2)
             Atack2();
         else
@@ -78,9 +81,8 @@ public class Player : MonoBehaviour
     }
 
    public void Atack1()
-    {
-   
-        _anim.SetTrigger("Atack");
+   {
+       _anim.SetTrigger("Atack");
         Touched();
     }
 
@@ -97,6 +99,7 @@ public class Player : MonoBehaviour
 
     public void Atack2()
     {
+        
         Interactable();
         _press = 0;
         Touched();
@@ -154,4 +157,11 @@ public class Player : MonoBehaviour
         
         _coll.GetComponent<Houses>().EnoughtMoney();
      }
+
+   
+    public void ChangeAttack()
+    {
+        if (_attack == false)
+            _attack = !_attack;
+    }
 }

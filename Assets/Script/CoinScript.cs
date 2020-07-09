@@ -8,7 +8,7 @@ public class CoinScript : MonoBehaviour
 {
     // Start is called before the first frame update
     private Text text;
-    public  int coinAmount=0;
+    public static int coinAmount;
     void Start()
     {
         text = GetComponent<Text>();
@@ -32,5 +32,10 @@ public class CoinScript : MonoBehaviour
         
         return false;
 
+    }
+
+    public void AddCoin(int money)
+    {
+        coinAmount += money;
     }
 }

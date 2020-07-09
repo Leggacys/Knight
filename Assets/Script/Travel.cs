@@ -6,11 +6,12 @@ public class Travel : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject TravelMenu;
-    public GameObject MoveCanvas;
+    
+    public int SceneTransfer;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       TravelMenu.GetComponent<TransferPanel>().LoadScene(2);
+       TravelMenu.GetComponent<TransferPanel>().LoadScene(SceneTransfer);
     }
 }

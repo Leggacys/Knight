@@ -16,12 +16,17 @@ public class Enemy : MonoBehaviour
     public int damage;
     public GameObject sound;
     public GameObject hitSound;
+    [HideInInspector]
+    public GameObject _moneyTable;
+    public int coinDrop;
+    public GameObject blod;
     //Private variable
     [HideInInspector]
     public GameObject _player;
-    private Animator _anim;
-   virtual public void Start()
+
+    virtual public void Start()
     {
+        _moneyTable = GameObject.FindGameObjectWithTag("Coin");
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 

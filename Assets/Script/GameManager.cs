@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
     {
        
         if (_player == null)
-            _tranferPanel.GetComponent<TransferPanel>().LoadScene(1);
+            _tranferPanel.GetComponent<TransferPanel>().LoadScene(0);
         if (_player!=null&&GameObject.FindGameObjectsWithTag("Enemies").Length==0)
-            _tranferPanel.GetComponent<TransferPanel>().LoadScene(1);
+            _tranferPanel.GetComponent<TransferPanel>().LoadScene(0);
     }
 
     

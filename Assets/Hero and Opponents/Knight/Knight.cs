@@ -70,7 +70,13 @@ public class Knight : Enemy,IHitit
         health -= damage;
         if (health <= 0)
         {
+            DropCoin();
             StartCoroutine(Dead());
         }
+    }
+
+    public void DropCoin()
+    {
+        _moneyTable.GetComponent<CoinScript>().AddCoin(coinDrop);
     }
 }
