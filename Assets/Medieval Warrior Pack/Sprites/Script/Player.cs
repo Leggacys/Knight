@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
      IEnumerator Death()
     {
         _anim.SetTrigger("Death");
-        transferPanel.GetComponent<TransferPanel>().LoadScene(1);
+        transferPanel.GetComponent<TransferPanel>().LoadScene(0);
         yield return new WaitForSeconds(0.7f);
         Destroy(gameObject);
 
@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
    
     public void ChangeAttack()
     {
-        if (_attack == false)
+        if(_attack==true)
             _attack = !_attack;
     }
 }

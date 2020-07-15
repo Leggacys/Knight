@@ -17,6 +17,7 @@ public class Facing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_player!=null)
         if (_player.transform.position.x > transform.position.x && _facingRight == false ||
             _player.transform.position.x < transform.position.x && _facingRight == true)
         {

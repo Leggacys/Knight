@@ -14,6 +14,11 @@ public class TransferPanel : MonoBehaviour
     }
 
 
+    void Update()
+    {
+        
+    }
+
     public void LoadScene(int index)
     {
         StartCoroutine(Transition(index));

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Houses : MonoBehaviour,IBought
@@ -12,22 +13,37 @@ public class Houses : MonoBehaviour,IBought
     public GameObject ornament;
     public GameObject civilian;
     public GameObject sound;
+    public GameObject Word;
 
     //Private Variable
     private GameObject _player;
     private bool _bought = false;
     
-    void Start()
+
+    public void Start()
     {
-        
-        _player=GameObject.FindGameObjectWithTag("Player");
-        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+        _player = GameObject.FindGameObjectWithTag("Player");
+        HousesManager.instance.Memorize(_bought,gameObject.name);
+       _bought = HousesManager.instance.ReturnValue(gameObject.name);
+       if (_bought == false)
+           GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+        Debug.Log(gameObject.name+_bought);
+
     }
 
     public void Update()
     {
-       if(_bought==false)
-        if (_player.transform.position.x<areaMax&&_player.transform.position.x>areaMin)
+        if (_bought == false)
+        { 
+            HouseStatus();
+        }
+    
+          
+    }
+
+    public void HouseStatus()
+    {
+        if (_player.transform.position.x < areaMax && _player.transform.position.x > areaMin)
         {
             Area(true);
         }
@@ -52,7 +68,6 @@ public class Houses : MonoBehaviour,IBought
         }
     }
 
-
     IEnumerator Alpha()
     {
 
@@ -69,11 +84,14 @@ public class Houses : MonoBehaviour,IBought
 
     }
 
-
     public void EnoughtMoney()
     {
         if (GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().CoinAmount(price) && !_bought)
         {
+            Instantiate(Word, new Vector3(transform.position.x,
+                transform.position.y+0.4f
+                ,transform.position.z), transform.rotation);
+            HousesManager.instance.Change(gameObject.name,true);
             StartCoroutine( Alpha());
             civilian.SetActive(true);
             Instantiate(sound, transform.position, transform.rotation);

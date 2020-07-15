@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 9
   m_Sprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -178,6 +178,8 @@ MonoBehaviour:
   health: 10
   transferPanel: {fileID: 0}
   sound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  coins: {fileID: 0}
 --- !u!1 &745912733962686708
 GameObject:
   m_ObjectHideFlags: 0

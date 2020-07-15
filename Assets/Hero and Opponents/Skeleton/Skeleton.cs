@@ -23,7 +23,7 @@ public class Skeleton : Enemy,IHitit
     // Update is called once per frame
      void Update()
     {
-        if (player.health > 0)
+        if (_player!=null)
         {
 
         if (Vector2.Distance(transform.position, _player.transform.position) > distance)

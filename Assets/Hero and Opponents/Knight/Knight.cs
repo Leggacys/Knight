@@ -67,10 +67,13 @@ public class Knight : Enemy,IHitit
     public void TakeDamage(int damage)
     {
         _anim.SetTrigger("Hit");
+        Instantiate(hitSound, transform.position, transform.rotation);
         health -= damage;
         if (health <= 0)
         {
             DropCoin();
+            Instantiate(sound, transform.position, transform.rotation);
+            Instantiate(blod, transform.position, transform.rotation);
             StartCoroutine(Dead());
         }
     }
