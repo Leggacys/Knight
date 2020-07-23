@@ -1748,7 +1748,7 @@ MonoBehaviour:
   ornament: {fileID: 1396036915}
   civilian: {fileID: 1144153254}
   sound: {fileID: 6315653236322628138, guid: a44fb5d1858f25340a71d54d4b94429a, type: 3}
-  Word: {fileID: 660150298478213703, guid: e395a907673923b45a36eac0198bd914, type: 3}
+  Word: {fileID: 5481883092986765362, guid: fdbca08ffb4ad9a488457030d55ee016, type: 3}
 --- !u!61 &226463432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8222,7 +8222,7 @@ MonoBehaviour:
   ornament: {fileID: 16067814}
   civilian: {fileID: 520746107}
   sound: {fileID: 6315653236322628138, guid: a44fb5d1858f25340a71d54d4b94429a, type: 3}
-  Word: {fileID: 660150298478213703, guid: e395a907673923b45a36eac0198bd914, type: 3}
+  Word: {fileID: 5481883092986765362, guid: fdbca08ffb4ad9a488457030d55ee016, type: 3}
 --- !u!61 &988566840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12127,7 +12127,7 @@ MonoBehaviour:
   ornament: {fileID: 1459616771}
   civilian: {fileID: 814179590}
   sound: {fileID: 6315653236322628138, guid: a44fb5d1858f25340a71d54d4b94429a, type: 3}
-  Word: {fileID: 660150298478213703, guid: e395a907673923b45a36eac0198bd914, type: 3}
+  Word: {fileID: 5481883092986765362, guid: fdbca08ffb4ad9a488457030d55ee016, type: 3}
 --- !u!61 &1474737670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17099,7 +17099,7 @@ MonoBehaviour:
   ornament: {fileID: 767358893}
   civilian: {fileID: 8624487474136796915}
   sound: {fileID: 6315653236322628138, guid: a44fb5d1858f25340a71d54d4b94429a, type: 3}
-  Word: {fileID: 660150298478213703, guid: e395a907673923b45a36eac0198bd914, type: 3}
+  Word: {fileID: 5481883092986765362, guid: fdbca08ffb4ad9a488457030d55ee016, type: 3}
 --- !u!61 &2133807984
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class Knight : Enemy,IHitit
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position,_player.transform.position)>distance)
+        if(!Physics2D.Raycast(transform.position,Vector2.left,attackRange,enemyLayers))
         {
             _anim.SetBool("Walk", true);
             transform.position= Vector2.MoveTowards(transform.position, _player.transform.position,speed*Time.deltaTime);
@@ -36,7 +36,6 @@ public class Knight : Enemy,IHitit
     IEnumerator Atack1()
     {
         _anim.SetTrigger("Atack1");
-        Touched();
         yield return new WaitForSeconds(TimeBetwenTheAtack);
         _finishAtack = true;
 
@@ -47,7 +46,7 @@ public class Knight : Enemy,IHitit
         Collider2D[] enemies = Physics2D.OverlapCircleAll(hitPoint.position, radius, enemyLayers);
         foreach (var e in enemies)
         {
-            e.GetComponent<Player>().TakeDamage(damage);
+            e.GetComponent<IHititSolediers>().TakeDamage(damage);
         }
     }
 
@@ -59,7 +58,7 @@ public class Knight : Enemy,IHitit
     public IEnumerator Dead()
     {
         _anim.SetTrigger("Dead");
-        yield return  new WaitForSeconds(1f);
+        yield return  new WaitForSeconds(0.8f);
         Destroy(gameObject);
         
     }

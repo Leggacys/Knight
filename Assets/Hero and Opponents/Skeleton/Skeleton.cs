@@ -26,8 +26,8 @@ public class Skeleton : Enemy,IHitit
         if (_player!=null)
         {
 
-        if (Vector2.Distance(transform.position, _player.transform.position) > distance)
-        {
+            if (!Physics2D.Raycast(transform.position, Vector2.left, attackRange, enemyLayers))
+            {
             _anim.SetBool("Walk", true);
             transform.position = Vector2.MoveTowards(transform.position,_player.transform.position, speed * Time.deltaTime);
         }
@@ -67,9 +67,9 @@ public class Skeleton : Enemy,IHitit
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(hitPoint.position, radius, enemyLayers);
-         foreach(var e in enemies)
+        foreach (var e in enemies)
         {
-            e.GetComponent<Player>().TakeDamage(damage);
+            e.GetComponent<IHititSolediers>().TakeDamage(damage);
         }
     }
 

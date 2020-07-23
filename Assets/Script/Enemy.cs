@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
     public GameObject _moneyTable;
     public int coinDrop;
     public GameObject blod;
+    public float attackRange;
+
     //Private variable
     [HideInInspector]
     public GameObject _player;
@@ -30,8 +32,4 @@ public class Enemy : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 
-   
-    
-
-   
 }

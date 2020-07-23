@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IHititSolediers
 {
     //Public Variable
     public Joystick joystick;

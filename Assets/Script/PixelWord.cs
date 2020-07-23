@@ -10,7 +10,7 @@ public class PixelWord : MonoBehaviour
     private Vector2 Destination;
     void Start()
     {
-        Alpha();
+       StartCoroutine(Alpha());
         Destination.x = gameObject.transform.position.x;
         Destination.y = gameObject.transform.position.y +2;
         Destroy(gameObject, 3f);
@@ -31,7 +31,7 @@ public class PixelWord : MonoBehaviour
         float alpha = 1;
         while (alpha != 0)
         {
-            GetComponent<SpriteRenderer>().color = new Color(250, 255, 0, alpha);
+            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
             alpha -= 0.2f;
             yield return new WaitForSeconds(0.5f);
         }

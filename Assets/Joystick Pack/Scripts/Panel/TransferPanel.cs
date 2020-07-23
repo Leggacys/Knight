@@ -13,12 +13,6 @@ public class TransferPanel : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-
-    void Update()
-    {
-        
-    }
-
     public void LoadScene(int index)
     {
         StartCoroutine(Transition(index));

@@ -202,7 +202,7 @@ MonoBehaviour:
   radius: 0.27
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   hitPoint: {fileID: 2812528638607491416}
   damage: 1
   sound: {fileID: 193960756156751752, guid: 9e3ad76f4c73c68439dd737b231d4bae, type: 3}
@@ -211,6 +211,7 @@ MonoBehaviour:
   _moneyTable: {fileID: 0}
   coinDrop: 2
   blod: {fileID: 4343191471388563967, guid: 8c4b8c4dc3c1880429ae11ce6eb44cd3, type: 3}
+  attackRange: 0
   _player: {fileID: 0}
   player: {fileID: 745912732900872107, guid: c72629a267998ec429c2e93837ec617d, type: 3}
 --- !u!114 &2784536046058914002
