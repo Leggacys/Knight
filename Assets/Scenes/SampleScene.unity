@@ -3130,6 +3130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b960a2558397c4086da2cdec8a523a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveMenu: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

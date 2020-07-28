@@ -9,6 +9,8 @@ TagManager:
   - Coin
   - House
   - Soldier
+  - MainMenu
+  - MoveMenu
   layers:
   - Default
   - TransparentFX

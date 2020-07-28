@@ -154,7 +154,6 @@ public class Player : MonoBehaviour, IHititSolediers
 
     public void Buy()
      {
-        
         _coll.GetComponent<Houses>().EnoughtMoney();
      }
 

@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     public GameObject moveCanvas;
     void Start()
     {
-       moveCanvas.SetActive(false);
+      
     }
 
     

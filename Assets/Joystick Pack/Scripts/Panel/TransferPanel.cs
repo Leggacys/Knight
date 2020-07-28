@@ -7,15 +7,19 @@ public class TransferPanel : MonoBehaviour
 {
     // Start is called before the first frame update
     private Animator _anim;
+    
 
     void Start()
     {
+        
         _anim = GetComponent<Animator>();
     }
 
     public void LoadScene(int index)
     {
+       
         StartCoroutine(Transition(index));
+        
     }
 
     IEnumerator Transition(int index)

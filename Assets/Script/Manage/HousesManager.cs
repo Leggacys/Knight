@@ -34,11 +34,8 @@ public class HousesManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
     public void Memorize(bool value,string name)
     {
         if(_houses.ContainsKey(name)==false)
@@ -52,7 +49,9 @@ public class HousesManager : MonoBehaviour
 
     private void Load()
     {
+        Debug.Log("Load Hoses");
         _houses = GameManager.instance.ReturnValue();
+        
     }
 
     public void Change(string key, bool value)

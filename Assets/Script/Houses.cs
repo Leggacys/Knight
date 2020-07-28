@@ -27,8 +27,7 @@ public class Houses : MonoBehaviour,IBought
        _bought = HousesManager.instance.ReturnValue(gameObject.name);
        if (_bought == false)
            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
-        Debug.Log(gameObject.name+_bought);
-
+        Debug.Log(gameObject.name + " " + _bought);
     }
 
     public void Update()
