@@ -36,8 +36,6 @@ public class Houses : MonoBehaviour,IBought
         { 
             HouseStatus();
         }
-    
-          
     }
 
     public void HouseStatus()
