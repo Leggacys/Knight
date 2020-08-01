@@ -48,7 +48,7 @@ public class HousesManager : MonoBehaviour
 
     public void LoadHouses()
     {
-        HousesStatus hous = SaveSystem.Load();
+        DataSaved hous = SaveSystem.Load();
         _houses.Clear();
         foreach (var item in hous._houses)
         {

@@ -1,21 +1,27 @@
 fileFormatVersion: 2
-guid: 3eb6c24c1f9a7fe49ac47fc974b2a2a5
+guid: 40834912ca492db44b62044b38a8dd65
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7848039375673857549
-    second: Dash_0
+      213: -7008412969330441016
+    second: Attack_0
   - first:
-      213: 1228786266525858794
-    second: Dash_1
+      213: -7763475090823894447
+    second: Attack_1
   - first:
-      213: -8184982077848143418
-    second: Dash_2
+      213: 302641331129538988
+    second: Attack_2
   - first:
-      213: 3821791876570597701
-    second: Dash_3
+      213: -6329420634031446844
+    second: Attack_3
+  - first:
+      213: -910092549403018386
+    second: Attack_4
+  - first:
+      213: 221524225039350300
+    second: Attack_5
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -69,6 +75,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -134,7 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dash_0
+      name: Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15c03240399710749afb44786c4cacb2
-      internalID: -7848039375673857549
+      spriteID: 5b4ed5d97b1367c45b44eeef23ff3450
+      internalID: -7008412969330441016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash_1
+      name: Attack_1
       rect:
         serializedVersion: 2
         x: 140
@@ -169,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bef90c280187e043926707b1e5a9797
-      internalID: 1228786266525858794
+      spriteID: e45c0cd381e18bf4d9d6a53e5ef3cda9
+      internalID: -7763475090823894447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash_2
+      name: Attack_2
       rect:
         serializedVersion: 2
         x: 280
@@ -190,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 123af01f6514167498053638521d1e22
-      internalID: -8184982077848143418
+      spriteID: 3c0069b649eedb342a5d672186c92ccb
+      internalID: 302641331129538988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dash_3
+      name: Attack_3
       rect:
         serializedVersion: 2
         x: 420
@@ -211,8 +218,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc266aba05403f84a984bd9e5088582a
-      internalID: 3821791876570597701
+      spriteID: 0419077530193824bb3ce522196cf5c2
+      internalID: -6329420634031446844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619cc829c87c62f458608c17e33ee58b
+      internalID: -910092549403018386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487671cdc0621974bb578f06619de666
+      internalID: 221524225039350300
       vertices: []
       indices: 
       edges: []

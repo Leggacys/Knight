@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class HousesStatus
+public class DataSaved
 { 
 
     public Dictionary<string, bool> _houses = new Dictionary<string, bool>();
+    
 
-    public HousesStatus(int a)
+    public DataSaved(int a)
     {
         _houses = HousesManager.instance.ReturnValue();
+
     }
 }

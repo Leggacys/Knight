@@ -20,13 +20,13 @@ public static class SaveSystem
         {
             stream = new FileStream(path, FileMode.Create);
         }
-        HousesStatus _hous = new HousesStatus(1);
+        DataSaved _hous = new DataSaved(1);
         formatter.Serialize(stream, _hous);
         stream.Close();
         Debug.Log("Succes Save");
     }
 
-    public static HousesStatus Load()
+    public static DataSaved Load()
     {
         string path = Application.persistentDataPath + "/player.fun";
         if(File.Exists(path))
@@ -34,7 +34,7 @@ public static class SaveSystem
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = File.OpenRead(path);
 
-           HousesStatus data = formatter.Deserialize(stream) as HousesStatus;
+            DataSaved data = formatter.Deserialize(stream) as DataSaved;
             stream.Close();
             Debug.Log("SUCCES");
             return data;
