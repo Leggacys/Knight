@@ -6,11 +6,14 @@ public class DataSaved
 { 
 
     public Dictionary<string, bool> _houses = new Dictionary<string, bool>();
+    public Dictionary<string, bool> _soldierHouses = new Dictionary<string, bool>();
     
 
     public DataSaved(int a)
     {
         _houses = HousesManager.instance.ReturnValue();
+        _soldierHouses = CazarmManager.instance.ReturnValue();
 
     }
+
 }

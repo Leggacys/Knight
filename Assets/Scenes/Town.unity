@@ -592,6 +592,8 @@ GameObject:
   - component: {fileID: 142082758}
   - component: {fileID: 142082759}
   - component: {fileID: 142082757}
+  - component: {fileID: 142082762}
+  - component: {fileID: 142082761}
   - component: {fileID: 142082756}
   - component: {fileID: 142082760}
   m_Layer: 0
@@ -689,6 +691,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 484bb441527ad684a86f962f7d55270d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &142082761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142082755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8df7b06b84c3e84f9ca778ac1663cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &142082762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142082755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54f82f6aab5c60448f955d0825c6f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &153779262
@@ -9153,7 +9179,7 @@ GameObject:
   - component: {fileID: 1550159159}
   m_Layer: 0
   m_Name: MilitaCastle
-  m_TagString: House
+  m_TagString: SoldierHous
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9259,14 +9285,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550159156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2442ea0dee9aebe4b9d04949c2448eb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d3560f0cbaa334e998cc2a5b3f59f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   areaMax: -11
   areaMin: -15
   price: 0
   ornament: {fileID: 2000265245}
-  civilian: {fileID: 373034200}
+  soldier: {fileID: 373034200}
   sound: {fileID: 6315653236322628138, guid: a44fb5d1858f25340a71d54d4b94429a, type: 3}
   Word: {fileID: 5481883092986765362, guid: fdbca08ffb4ad9a488457030d55ee016, type: 3}
 --- !u!1 &1567895054

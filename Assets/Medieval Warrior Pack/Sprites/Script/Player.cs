@@ -147,14 +147,17 @@ public class Player : MonoBehaviour, IHititSolediers
     }
     void  OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "House")
+        if (collision.tag == "House"||collision.tag=="SoldierHous")
             _coll = collision;
         
     }
 
     public void Buy()
      {
+        if(_coll.tag=="Houses")
         _coll.GetComponent<Houses>().EnoughtMoney();
+        if (_coll.tag == "SoldierHous")
+            _coll.GetComponent<SoldierHous>().EnoughtMoney();
      }
 
    

@@ -11,6 +11,7 @@ TagManager:
   - Soldier
   - MainMenu
   - MoveMenu
+  - SoldierHous
   layers:
   - Default
   - TransparentFX

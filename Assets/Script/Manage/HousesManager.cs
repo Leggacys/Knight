@@ -39,25 +39,7 @@ public class HousesManager : MonoBehaviour
         _houses[key] = value;
     }
 
-    public void SaveHouses()
-    {
-        foreach (var e in _houses)
-            Debug.Log(e.Key + " " + e.Value);
-        SaveSystem.SaveHouses();
-    }
-
-    public void LoadHouses()
-    {
-        DataSaved hous = SaveSystem.Load();
-        _houses.Clear();
-        foreach (var item in hous._houses)
-        {
-            _houses.Add(item.Key, item.Value);
-            Debug.Log(item.Key + " " + item.Value);
-        }
-
-        SceneManager.LoadScene(0);
-    }
+   
 
     public Dictionary<string,bool> ReturnValue()
     {
@@ -68,5 +50,10 @@ public class HousesManager : MonoBehaviour
     {
         if(!_houses.ContainsKey(key))
         _houses.Add(key, value);
+       
+    }
+    public void LoadData(Dictionary<string, bool> _houses)
+    {
+        this._houses = new Dictionary<string, bool>(_houses);
     }
 }
