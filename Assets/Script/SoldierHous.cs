@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SoldierHous : MonoBehaviour,IBought
@@ -21,10 +22,12 @@ public class SoldierHous : MonoBehaviour,IBought
     public void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        CazarmManager.instance.Memorize(gameObject.name, _bought);
+        if (!CazarmManager.instance.Exist(gameObject.name))
+            CazarmManager.instance.Memorize(gameObject.name, _bought);
         _bought = CazarmManager.instance.ReturnValue(gameObject.name);
         if (_bought == false)            
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+       
     }
     public void Update()
     {
@@ -40,7 +43,7 @@ public class SoldierHous : MonoBehaviour,IBought
             Instantiate(Word, new Vector3(transform.position.x,
                 transform.position.y + 0.4f
                 , transform.position.z), transform.rotation);
-           // HousesManager.instance.Change(gameObject.name, true);
+           CazarmManager.instance.Change(gameObject.name, true);
             StartCoroutine(Alpha());
             soldier.SetActive(true);
             Instantiate(sound, transform.position, transform.rotation);
@@ -76,6 +79,7 @@ public class SoldierHous : MonoBehaviour,IBought
         }
     }
 
+   
     IEnumerator Alpha()
     {
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Xml;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +16,7 @@ public class HousesManager : MonoBehaviour
     // Start is called before the first frame update
    public void Start()
     {
-       
+        
     }
     void Awake()
     {
@@ -34,7 +35,14 @@ public class HousesManager : MonoBehaviour
         return _houses[key];
     }
 
-    public void Change(string key, bool value)
+    public bool Exist(string key)
+    {
+        if (!_houses.ContainsKey(key))
+            return false;
+        return true;
+    }
+
+            public void Change(string key, bool value)
     {
         _houses[key] = value;
     }

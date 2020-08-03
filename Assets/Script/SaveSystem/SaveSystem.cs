@@ -26,6 +26,25 @@ public static class SaveSystem
         Debug.Log("Succes Save");
     }
 
+    public static void Restart()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/player.fun";
+        FileStream stream;
+        if (File.Exists(path))
+        {
+            stream = File.OpenWrite(path);
+        }
+        else
+        {
+            stream = new FileStream(path, FileMode.Create);
+        }
+        DataSaved _hous = new DataSaved(0.2f);
+        formatter.Serialize(stream, _hous);
+        stream.Close();
+        Debug.Log("Succes Restart");
+    }
+
     public static DataSaved Load()
     {
         string path = Application.persistentDataPath + "/player.fun";
@@ -33,7 +52,6 @@ public static class SaveSystem
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = File.OpenRead(path);
-
             DataSaved data = formatter.Deserialize(stream) as DataSaved;
             stream.Close();
             Debug.Log("SUCCES");

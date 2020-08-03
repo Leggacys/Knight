@@ -16,4 +16,10 @@ public class DataSaved
 
     }
 
+    public DataSaved(float a)
+    {
+        _houses = new Dictionary<string, bool>();
+        _soldierHouses = new Dictionary<string, bool>();
+    }
+
 }

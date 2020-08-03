@@ -28,12 +28,20 @@ public class CazarmManager : MonoBehaviour
     {
         if (!_houses.ContainsKey(key))
             _houses.Add(key, value);
-        Debug.Log(key + " " + value);
+        
     }
 
     public void Change(string key, bool value)
     {
         _houses[key] = value;
+        
+    }
+
+    public bool Exist(string key)
+    {
+        if (!_houses.ContainsKey(key))
+            return false;
+        return true;
     }
 
     public bool ReturnValue(string key)
@@ -47,6 +55,11 @@ public class CazarmManager : MonoBehaviour
 
     public void LoadData(Dictionary<string, bool> _houses)
     {
-        this._houses = new Dictionary<string, bool>(_houses);
+        this._houses.Clear();
+        foreach (var item in _houses)
+        {
+            this._houses.Add(item.Key, item.Value);
+             Debug.Log(item.Key+" "+item.Value);
+        }
     }
 }

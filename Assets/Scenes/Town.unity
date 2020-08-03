@@ -592,10 +592,10 @@ GameObject:
   - component: {fileID: 142082758}
   - component: {fileID: 142082759}
   - component: {fileID: 142082757}
-  - component: {fileID: 142082762}
   - component: {fileID: 142082761}
   - component: {fileID: 142082756}
   - component: {fileID: 142082760}
+  - component: {fileID: 142082762}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 267824342}
   - component: {fileID: 267824344}
   - component: {fileID: 267824345}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: NewKongHousDarks
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -2277,7 +2277,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 379642238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 142082762}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &379642238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,8 +2673,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 142082760}
-        m_MethodName: LoadHouses
+      - m_Target: {fileID: 142082762}
+        m_MethodName: LoadInGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3566,9 +3577,10 @@ EdgeCollider2D:
   - {x: -5.3250713, y: 1.8556378}
   - {x: 1.4362764, y: 1.8841319}
   - {x: 2.946622, y: 1.8905873}
-  - {x: 3.0968895, y: 1.8805673}
-  - {x: 3.106907, y: 1.8905873}
-  - {x: 3.106907, y: 1.8404872}
+  - {x: 3.0585175, y: 1.8963706}
+  - {x: 3.1046495, y: 1.8973601}
+  - {x: 3.1497574, y: 1.9151816}
+  - {x: 3.12045, y: 1.8991852}
   - {x: 3.1382675, y: 1.9114075}
   - {x: 4.298892, y: 1.884052}
   - {x: 4.7831917, y: 1.910831}
@@ -5407,7 +5419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889297468}
   - component: {fileID: 889297469}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CrackKong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7731,7 +7743,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 142082760}
+      - m_Target: {fileID: 142082762}
         m_MethodName: SaveHouses
         m_Mode: 1
         m_Arguments:

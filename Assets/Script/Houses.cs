@@ -23,11 +23,12 @@ public class Houses : MonoBehaviour,IBought
     public void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        if(!HousesManager.instance.Exist(gameObject.name))
         HousesManager.instance.Memorize(_bought,gameObject.name);
        _bought = HousesManager.instance.ReturnValue(gameObject.name);
        if (_bought == false)
            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
-        Debug.Log(gameObject.name + " " + _bought);
+        
     }
 
     public void Update()
@@ -72,7 +73,6 @@ public class Houses : MonoBehaviour,IBought
         float alpha = 0.2f;
         while (alpha < 10f)
         {
-            
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
             ornament.GetComponent<SpriteRenderer>().color=new Color(1,1,1,alpha);
             alpha += 0.2f;

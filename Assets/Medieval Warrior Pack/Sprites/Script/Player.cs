@@ -150,11 +150,12 @@ public class Player : MonoBehaviour, IHititSolediers
         if (collision.tag == "House"||collision.tag=="SoldierHous")
             _coll = collision;
         
+        
     }
 
     public void Buy()
      {
-        if(_coll.tag=="Houses")
+        if(_coll.tag=="House")
         _coll.GetComponent<Houses>().EnoughtMoney();
         if (_coll.tag == "SoldierHous")
             _coll.GetComponent<SoldierHous>().EnoughtMoney();
