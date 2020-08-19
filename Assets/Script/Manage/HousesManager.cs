@@ -37,9 +37,9 @@ public class HousesManager : MonoBehaviour
 
     public bool Exist(string key)
     {
-        if (!_houses.ContainsKey(key))
-            return false;
-        return true;
+        if (_houses.ContainsKey(key))
+            return true;
+        return false;
     }
 
             public void Change(string key, bool value)

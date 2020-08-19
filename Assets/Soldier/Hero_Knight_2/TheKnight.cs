@@ -57,10 +57,7 @@ public class TheKnight : MonoBehaviour, IHititSolediers
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(HitPoint.position, attackRange, _enemyLayers);
-        foreach (var e in enemies)
-        {
-            e.GetComponent<IHitit>().TakeDamage(damage);
-        }
+        enemies[0].GetComponent<IHitit>().TakeDamage(damage);
     }
 
     public void OnDrawGizmos()

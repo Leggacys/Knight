@@ -21,7 +21,7 @@ public class Knight : Enemy,IHitit
         if(!Physics2D.Raycast(transform.position,Vector2.left,attackRange,enemyLayers))
         {
             _anim.SetBool("Walk", true);
-            transform.position= Vector2.MoveTowards(transform.position, _player.transform.position,speed*Time.deltaTime);
+            transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
         }
         else
         {
@@ -44,10 +44,7 @@ public class Knight : Enemy,IHitit
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(hitPoint.position, radius, enemyLayers);
-        foreach (var e in enemies)
-        {
-            e.GetComponent<IHititSolediers>().TakeDamage(damage);
-        }
+        enemies[0].GetComponent<IHititSolediers>().TakeDamage(damage);
     }
 
     public void OnDrawGizmos()

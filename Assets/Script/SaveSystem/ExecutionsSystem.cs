@@ -9,7 +9,8 @@ public class ExecutionsSystem : MonoBehaviour
 
     private void Awake()
     {
-        LoadHouses();
+      LoadHouses();
+        
         if (instance == null)
             instance = this;
         else
@@ -29,17 +30,10 @@ public class ExecutionsSystem : MonoBehaviour
         DataSaved data = SaveSystem.Load();
         HousesManager.instance.LoadData(data._houses);
         CazarmManager.instance.LoadData(data._soldierHouses);
-       
-    }
-
-
-    public void LoadInGame()
-    {
-        DataSaved data = SaveSystem.Load();
-        HousesManager.instance.LoadData(data._houses);
-        CazarmManager.instance.LoadData(data._soldierHouses);
-        SceneManager.LoadScene(0);
-    }    
+        StatusManager.instance.LoadData(data._status);
+        if (GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().ReturnValue() < data.money)
+            GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().LoadData(data.money);
+    } 
 
     public void Restart()
     {

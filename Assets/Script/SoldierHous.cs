@@ -27,6 +27,11 @@ public class SoldierHous : MonoBehaviour,IBought
         _bought = CazarmManager.instance.ReturnValue(gameObject.name);
         if (_bought == false)            
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+        else
+        {
+            soldier.SetActive(true);
+            ornament.SetActive(true);
+        }
        
     }
     public void Update()
@@ -40,6 +45,7 @@ public class SoldierHous : MonoBehaviour,IBought
     {
         if (GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().CoinAmount(price) && !_bought)
         {
+            SaveSystem.SaveHouses();
             Instantiate(Word, new Vector3(transform.position.x,
                 transform.position.y + 0.4f
                 , transform.position.z), transform.rotation);

@@ -62,6 +62,9 @@ TextureImporter:
   - first:
       213: 2088770946028252184
     second: Menu Buttons sprite (BnW)_19
+  - first:
+      213: 1286967997032707097
+    second: Menu Buttons sprite (BnW)_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -566,7 +569,7 @@ TextureImporter:
         width: 605
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -574,6 +577,27 @@ TextureImporter:
       bones: []
       spriteID: 81cab2fcb1eccfc10800000000000000
       internalID: 2088770946028252184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Buttons sprite (BnW)_20
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 0
+        width: 214
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9143e6c139a3cd110800000000000000
+      internalID: 1286967997032707097
       vertices: []
       indices: 
       edges: []

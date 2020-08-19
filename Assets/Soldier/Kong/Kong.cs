@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngineInternal;
 
 public class Kong : MonoBehaviour, IHititSolediers
@@ -10,10 +11,10 @@ public class Kong : MonoBehaviour, IHititSolediers
     //Private Variable
     private Rigidbody2D _body;
     private Animator _anim;
-    private bool _finishingJump = true;
     private bool _fight = false;
     private RaycastHit2D _hit;
     private float time;
+    private float _nr = 0;
     //Public Variables
     public int health;
     public float atackRange;
@@ -26,6 +27,8 @@ public class Kong : MonoBehaviour, IHititSolediers
     public float floatHeight;
     public int damage;
     public float timeBetweenAttack;
+    public float radius;
+    public float _frequency;
     void Start()
     {
         _body = GetComponent<Rigidbody2D>();
@@ -54,34 +57,34 @@ public class Kong : MonoBehaviour, IHititSolediers
 
     private void Fight()
     {
-            _fight = true;
-        
+        _fight = true;
         _anim.SetBool("Walk", false);
-         _hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 0.7f,layers);
-        if(_hit.collider !=null)
+        _hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 0.7f, layers);
+            MaleAttack();
+    }
+
+    
+    private void MaleAttack()
+    {
+        _nr++;
+        if (_nr == _frequency)
         {
-            MaleAttack();      
+            SuperAttack();
+            _nr = 0;
         }
         else
         {
-            JumpAttack();
-        }
-    }
-
-    private void JumpAttack()
-    {
-        
-        if (_finishingJump == true)
-        {
-            _finishingJump = !_finishingJump;
-            StartCoroutine(Jump());
-        }
-    }
-    private void MaleAttack()
-    {
             _anim.SetTrigger("Kik");
+        }
+        
             time = Time.time;
         _fight = false;
+        
+    }
+
+    private void SuperAttack()
+    {
+        _anim.SetTrigger("Punch");
     }
     private void Walk()
     {
@@ -93,19 +96,7 @@ public class Kong : MonoBehaviour, IHititSolediers
         
     }
 
-   IEnumerator Jump()
-    {
-        
-        _anim.SetTrigger("Distance");
-        _body.velocity = Vector2.up * jumpforce;
-        yield return new WaitForSeconds(0.4f);
-        _anim.SetTrigger("NearEnemies");
-        _body.velocity = Vector2.right * (jumpforce-2);
-        yield return new WaitForSeconds(2f);
-        _finishingJump = !_finishingJump;
-        _fight = false;
-        
-    }
+  
 
     private void OnDrawGizmosSelected()
     {
@@ -116,9 +107,18 @@ public class Kong : MonoBehaviour, IHititSolediers
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(HitPoint.position, atackRange, enemyLayers);
-        foreach (var e in enemies)
+        if(enemies.Length!=0)
+        enemies[0].GetComponent<IHitit>().TakeDamage(damage);
+    }
+
+    public void Touchedsuper()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, radius, enemyLayers);
+
+        foreach (var item in enemies)
         {
-            e.GetComponent<IHitit>().TakeDamage(damage);
+            item.GetComponent<IHitit>().TakeDamage(damage);
+            item.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 4f, ForceMode2D.Impulse);
         }
     }
 
@@ -131,4 +131,6 @@ public class Kong : MonoBehaviour, IHititSolediers
             Destroy(gameObject);
         }
     }
+
+   
 }

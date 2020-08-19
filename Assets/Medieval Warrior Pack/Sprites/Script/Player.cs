@@ -15,12 +15,13 @@ public class Player : MonoBehaviour, IHititSolediers
     public LayerMask enemyLayers;
     public Transform HitPoint;
     public float atackRange;
-    public int damage;
-    public int health;
+    public float damage;
+    public float health;
     public GameObject transferPanel;
     public GameObject sound;
     public GameObject hurtSound;
     public CoinScript coins;
+    public float def ;
     //Private Variable
     private Animator _anim;
     private bool _facingRight = true;
@@ -30,9 +31,11 @@ public class Player : MonoBehaviour, IHititSolediers
     private bool _attack = false;
     void Start()
     {
+       
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-       
+       LoadNewStatus();
+
     }
 
     // Update is called once per frame
@@ -115,10 +118,7 @@ public class Player : MonoBehaviour, IHititSolediers
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(HitPoint.position, atackRange, enemyLayers);
-        foreach(var e in enemies)
-        {
-            e.GetComponent<IHitit>().TakeDamage(damage);
-        }
+        enemies[0].GetComponent<IHitit>().TakeDamage((int)damage);
     }
 
     private void OnDrawGizmosSelected()
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         _anim.SetTrigger("Hit");
         Instantiate(hurtSound, transform.position, transform.rotation);
-        health -= damage;
+        health -=( damage-def);
         if(health<=0)
         {
             StartCoroutine(Death());
@@ -166,5 +166,14 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         if(_attack==true)
             _attack = !_attack;
+    }
+
+    private void LoadNewStatus()
+    {
+        Dictionary<string, float> _newStatus = StatusManager.instance.LoadStatusInGame();
+        health += _newStatus["HP"];
+        speed += _newStatus["Speed"];
+        def += _newStatus["Def"];
+        damage += _newStatus["Attack"];
     }
 }

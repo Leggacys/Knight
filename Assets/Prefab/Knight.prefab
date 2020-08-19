@@ -144,6 +144,7 @@ MonoBehaviour:
   _moneyTable: {fileID: 0}
   coinDrop: 0
   blod: {fileID: 0}
+  attackRange: 0
   _player: {fileID: 0}
 --- !u!95 &3038384384818248186
 Animator:
@@ -172,7 +173,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3038384384818248189}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

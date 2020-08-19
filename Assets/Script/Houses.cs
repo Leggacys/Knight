@@ -14,7 +14,7 @@ public class Houses : MonoBehaviour,IBought
     public GameObject civilian;
     public GameObject sound;
     public GameObject Word;
-
+    public GameObject notEnoughtMoney;
     //Private Variable
     private GameObject _player;
     private bool _bought = false;
@@ -25,9 +25,16 @@ public class Houses : MonoBehaviour,IBought
         _player = GameObject.FindGameObjectWithTag("Player");
         if(!HousesManager.instance.Exist(gameObject.name))
         HousesManager.instance.Memorize(_bought,gameObject.name);
+        else
        _bought = HousesManager.instance.ReturnValue(gameObject.name);
+        Debug.Log(gameObject.name + " " + _bought);
        if (_bought == false)
            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.1f);
+       else
+        {
+            ornament.SetActive(true);
+            civilian.SetActive(true);
+        }
         
     }
 
@@ -85,6 +92,7 @@ public class Houses : MonoBehaviour,IBought
     {
         if (GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().CoinAmount(price) && !_bought)
         {
+            SaveSystem.SaveHouses();
             Instantiate(Word, new Vector3(transform.position.x,
                 transform.position.y+0.4f
                 ,transform.position.z), transform.rotation);
@@ -95,7 +103,9 @@ public class Houses : MonoBehaviour,IBought
         }
         else
         {
-            Debug.Log("you are too por");
+            Instantiate(notEnoughtMoney, new Vector3(transform.position.x,
+                transform.position.y + 0.4f
+                , transform.position.z), transform.rotation);
         }
     }
 }

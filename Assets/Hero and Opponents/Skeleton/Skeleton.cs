@@ -67,10 +67,7 @@ public class Skeleton : Enemy,IHitit
     public void Touched()
     {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(hitPoint.position, radius, enemyLayers);
-        foreach (var e in enemies)
-        {
-            e.GetComponent<IHititSolediers>().TakeDamage(damage);
-        }
+        enemies[0].GetComponent<IHititSolediers>().TakeDamage(damage);
     }
 
     public void OnDrawGizmos()

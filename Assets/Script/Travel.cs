@@ -12,6 +12,7 @@ public class Travel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        SaveSystem.SaveHouses();
        TravelMenu.GetComponent<TransferPanel>().LoadScene(SceneTransfer);
     }
 }

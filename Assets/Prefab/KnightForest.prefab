@@ -106,7 +106,7 @@ MonoBehaviour:
   radius: 0.72
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   hitPoint: {fileID: 5831883237714430385}
   damage: 3
   sound: {fileID: 3324796233697576454, guid: 3609cddf5bb74e34d8086b71ff5a16c8, type: 3}
@@ -115,6 +115,7 @@ MonoBehaviour:
   _moneyTable: {fileID: 0}
   coinDrop: 4
   blod: {fileID: 4343191471388563967, guid: 8c4b8c4dc3c1880429ae11ce6eb44cd3, type: 3}
+  attackRange: 2
   _player: {fileID: 0}
 --- !u!95 &5831883236805066207
 Animator:
@@ -143,7 +144,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5831883236805066200}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
