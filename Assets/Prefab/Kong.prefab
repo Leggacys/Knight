@@ -204,8 +204,10 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 512
-  lenght: 4
-  jumpforce: 20
+  lenght: 0.7
+  jumpforce: 7
   floatHeight: -3.06
   damage: 3
   timeBetweenAttack: 2
+  radius: 0.7
+  _frequency: 2

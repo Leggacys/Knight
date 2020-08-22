@@ -31,7 +31,7 @@ public class Move : MonoBehaviour
     {
         if(_reachPoint==false)
         {FacingCorrectly();
-            if (Vector2.Distance(transform.position, _randomPozition.transform.position) > 0.2f)
+            if (Vector2.Distance(transform.position, _randomPozition.transform.position) > 0.5f)
             { _anim.SetBool("Walk",true);
                 transform.position = Vector2.MoveTowards(
                 transform.position, _randomPozition.transform.position,

@@ -9,10 +9,13 @@ public class ButtonScript : MonoBehaviour
     private Transform _spawnPoint;
     public float time;
     public int money;
+    public string name;
 
     public void Start()
     {
         _spawnPoint = GameObject.FindGameObjectWithTag("SoldierSpawnPoint").transform;
+        if (CazarmManager.instance.ReturnValue(name) == false)
+            gameObject.SetActive(false);
     }
 
     public void SpawnSoldier()

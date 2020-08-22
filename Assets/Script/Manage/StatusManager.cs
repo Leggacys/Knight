@@ -24,8 +24,6 @@ public class StatusManager : MonoBehaviour
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(_player.transform.position);
-
     }
 
     public void Increse(iNCRESE slider)
@@ -36,7 +34,7 @@ public class StatusManager : MonoBehaviour
 
     public void Modifay(iNCRESE slider)
     {
-        _statusAtribute[slider.gameObject.name]++;
+        _statusAtribute[slider.gameObject.name]+=slider.gameObject.GetComponent<iNCRESE>().value;
     }
 
     public void Memorize(string key,int value)

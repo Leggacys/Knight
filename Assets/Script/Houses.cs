@@ -17,7 +17,8 @@ public class Houses : MonoBehaviour,IBought
     public GameObject notEnoughtMoney;
     //Private Variable
     private GameObject _player;
-    private bool _bought = false;
+    [HideInInspector]
+    public bool _bought = false;
     
 
     public void Start()

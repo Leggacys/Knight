@@ -16,7 +16,8 @@ public class SoldierHous : MonoBehaviour,IBought
 
     //Private Variable
     private GameObject _player;
-    private bool _bought = false;
+    [HideInInspector]
+    public bool _bought = false;
 
 
     public void Start()

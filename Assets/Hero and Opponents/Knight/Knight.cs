@@ -38,7 +38,6 @@ public class Knight : Enemy,IHitit
         _anim.SetTrigger("Atack1");
         yield return new WaitForSeconds(TimeBetwenTheAtack);
         _finishAtack = true;
-
     }
 
     public void Touched()

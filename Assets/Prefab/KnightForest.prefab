@@ -103,7 +103,7 @@ MonoBehaviour:
   distance: 0.7
   speed: 1
   health: 10
-  radius: 0.72
+  radius: 0.43
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1280
@@ -114,8 +114,8 @@ MonoBehaviour:
     type: 3}
   _moneyTable: {fileID: 0}
   coinDrop: 4
-  blod: {fileID: 4343191471388563967, guid: 8c4b8c4dc3c1880429ae11ce6eb44cd3, type: 3}
-  attackRange: 2
+  blod: {fileID: 2621023113872059012, guid: 7d6cbf85a4e95da4c8698b1312166c43, type: 3}
+  attackRange: 0.7
   _player: {fileID: 0}
 --- !u!95 &5831883236805066207
 Animator:
@@ -219,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5831883237714430384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.12400007, z: -10.5848875}
+  m_LocalPosition: {x: -0.034, y: -0.12400007, z: -10.5848875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5831883236805066205}

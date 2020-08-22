@@ -172,7 +172,10 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         Dictionary<string, float> _newStatus = StatusManager.instance.LoadStatusInGame();
         health += _newStatus["HP"];
+        
         speed += _newStatus["Speed"];
+        if (speed > 3)
+            speed = 3;
         def += _newStatus["Def"];
         damage += _newStatus["Attack"];
     }

@@ -46,7 +46,6 @@ public class Skeleton : Enemy,IHitit
     IEnumerator Atack1()
     {
         _anim.SetTrigger("Atack1");
-        Touched();
         yield return new WaitForSeconds(TimeBetwenTheAtack);
         _finishAtack = true;
        

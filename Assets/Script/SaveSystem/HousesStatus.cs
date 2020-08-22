@@ -27,6 +27,7 @@ public class DataSaved
         _houses = new Dictionary<string, bool>();
         _soldierHouses = new Dictionary<string, bool>();
         _status = new Dictionary<string, float>();
+        money = 0;
     }
 
 }

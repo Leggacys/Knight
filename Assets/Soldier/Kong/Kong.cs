@@ -118,7 +118,7 @@ public class Kong : MonoBehaviour, IHititSolediers
         foreach (var item in enemies)
         {
             item.GetComponent<IHitit>().TakeDamage(damage);
-            item.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 4f, ForceMode2D.Impulse);
+            item.GetComponent<Rigidbody2D>().AddForce(Vector2.right * jumpforce, ForceMode2D.Impulse);
         }
     }
 

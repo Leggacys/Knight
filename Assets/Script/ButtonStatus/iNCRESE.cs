@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class iNCRESE : MonoBehaviour,IStatus
 {
     private  Slider slider;
+    public float value = 1;
     private void Start()
     {
         slider = gameObject.GetComponent<Slider>();
@@ -16,9 +17,9 @@ public class iNCRESE : MonoBehaviour,IStatus
 
     public void Add()
     {
-        if(slider.value+1<=slider.maxValue)
+        if(slider.value+value<=slider.maxValue)
         {
-        slider.value += 1;
+        slider.value += value;
         StatusManager.instance.IncreseValue(slider.name, slider.value);
         }
     }
