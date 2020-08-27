@@ -39,7 +39,7 @@ public static class SaveSystem
         {
             stream = new FileStream(path, FileMode.Create);
         }
-        DataSaved _hous = new DataSaved(0.2f);
+        DataSaved _hous = new DataSaved(2f);
         formatter.Serialize(stream, _hous);
         stream.Close();
         Debug.Log("Succes Restart");

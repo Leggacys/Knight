@@ -130,6 +130,7 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         _anim.SetTrigger("Hit");
         Instantiate(hurtSound, transform.position, transform.rotation);
+        GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HleathBar>().UpdateSlider();
         health -=( damage-def);
         if(health<=0)
         {
@@ -170,9 +171,8 @@ public class Player : MonoBehaviour, IHititSolediers
 
     private void LoadNewStatus()
     {
-        Dictionary<string, float> _newStatus = StatusManager.instance.LoadStatusInGame();
+        Dictionary<string, float> _newStatus = new Dictionary<string, float>(StatusManager.instance.LoadStatusInGame());
         health += _newStatus["HP"];
-        
         speed += _newStatus["Speed"];
         if (speed > 3)
             speed = 3;

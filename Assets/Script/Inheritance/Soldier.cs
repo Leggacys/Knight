@@ -13,7 +13,6 @@ public class Soldier : MonoBehaviour
     public float health;
     public GameObject hitpoint;
     public LayerMask enemyLayers;
-    //Private Variables
     
 
 }

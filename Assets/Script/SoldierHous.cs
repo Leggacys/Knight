@@ -46,7 +46,7 @@ public class SoldierHous : MonoBehaviour,IBought
     {
         if (GameObject.FindGameObjectWithTag("Coin").GetComponent<CoinScript>().CoinAmount(price) && !_bought)
         {
-            SaveSystem.SaveHouses();
+            ExecutionsSystem.instance.SaveHouses();
             Instantiate(Word, new Vector3(transform.position.x,
                 transform.position.y + 0.4f
                 , transform.position.z), transform.rotation);

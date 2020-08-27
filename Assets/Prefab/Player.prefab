@@ -180,6 +180,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   hurtSound: {fileID: 0}
   coins: {fileID: 0}
+  def: 0
 --- !u!1 &745912733962686708
 GameObject:
   m_ObjectHideFlags: 0
