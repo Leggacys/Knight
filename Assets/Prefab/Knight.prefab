@@ -60,8 +60,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3038384384818248189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.056, y: -1.076, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.1534, y: -1.0029, z: 0}
+  m_LocalScale: {x: 1.1324, y: 1.1324, z: 1.1324}
   m_Children:
   - {fileID: 3038384383590092180}
   m_Father: {fileID: 0}
@@ -136,14 +136,15 @@ MonoBehaviour:
   radius: 0.2
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   hitPoint: {fileID: 3038384383590092180}
   damage: 2
-  sound: {fileID: 0}
-  hitSound: {fileID: 0}
+  sound: {fileID: 193960756156751752, guid: 9e3ad76f4c73c68439dd737b231d4bae, type: 3}
+  hitSound: {fileID: 3324796233697576454, guid: 3609cddf5bb74e34d8086b71ff5a16c8,
+    type: 3}
   _moneyTable: {fileID: 0}
   coinDrop: 0
-  blod: {fileID: 0}
+  blod: {fileID: 4343191471388563967, guid: 8c4b8c4dc3c1880429ae11ce6eb44cd3, type: 3}
   attackRange: 0
   _player: {fileID: 0}
 --- !u!95 &3038384384818248186

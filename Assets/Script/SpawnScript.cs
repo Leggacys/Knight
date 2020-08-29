@@ -42,6 +42,10 @@ public class SpawnScript : MonoBehaviour
                     _curentWaveIndex++;
                 }
             }
+            else
+            {
+                _curentWaveIndex = 0;
+            }
         }
     }
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.XR.Daydream;
 using UnityEngine;
 
 public class MartialArtist : Soldier,IHititSolediers

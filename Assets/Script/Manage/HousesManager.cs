@@ -42,7 +42,7 @@ public class HousesManager : MonoBehaviour
         return false;
     }
 
-            public void Change(string key, bool value)
+    public void Change(string key, bool value)
     {
         _houses[key] = value;
     }

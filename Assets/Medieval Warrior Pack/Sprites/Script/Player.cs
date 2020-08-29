@@ -130,7 +130,6 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         _anim.SetTrigger("Hit");
         Instantiate(hurtSound, transform.position, transform.rotation);
-        GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HleathBar>().UpdateSlider();
         health -=( damage-def);
         if(health<=0)
         {

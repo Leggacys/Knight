@@ -103,7 +103,7 @@ MonoBehaviour:
   distance: 0.7
   speed: 1
   health: 10
-  radius: 0.43
+  radius: 0.73
   enemyLayers:
     serializedVersion: 2
     m_Bits: 1280
@@ -115,7 +115,7 @@ MonoBehaviour:
   _moneyTable: {fileID: 0}
   coinDrop: 4
   blod: {fileID: 2621023113872059012, guid: 7d6cbf85a4e95da4c8698b1312166c43, type: 3}
-  attackRange: 0.7
+  attackRange: 0.5
   _player: {fileID: 0}
 --- !u!95 &5831883236805066207
 Animator:
