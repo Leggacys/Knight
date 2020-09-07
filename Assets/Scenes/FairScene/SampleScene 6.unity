@@ -2528,8 +2528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124.29339, y: -19.475256}
-  m_SizeDelta: {x: 57.7, y: 62.72}
+  m_AnchoredPosition: {x: 0, y: -19.47525}
+  m_SizeDelta: {x: 171.34, y: 62.72}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &395330219
 MonoBehaviour:
@@ -3503,6 +3503,8 @@ GameObject:
   - component: {fileID: 516662056}
   - component: {fileID: 516662058}
   - component: {fileID: 516662059}
+  - component: {fileID: 516662061}
+  - component: {fileID: 516662060}
   m_Layer: 9
   m_Name: Evilspike
   m_TagString: Enemies
@@ -3586,8 +3588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89611c2e7bf9d434996e8b1a13afc24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  coinDrop: 100
+  HP: 2000
+  coinDrop: 80
 --- !u!61 &516662059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3614,6 +3616,46 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7004185, y: 4.8}
   m_EdgeRadius: 0
+--- !u!114 &516662060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516662055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60accb51463a71549a3c55fab4c92018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 4347022395993373110, guid: f8b34294de543b2468133149f45b138d, type: 3}
+  - {fileID: 2812528639127695422, guid: 36558a9bf9efaa9458b04bffe42748d2, type: 3}
+  time:
+  - 3
+  - 5
+  numbersOfMonsters: 010000000100000002000000
+  numbersOfSpawnMonsters: 2
+  spawnPosition: {fileID: 676110618}
+--- !u!95 &516662061
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516662055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ef62173c2719a84281206c902dc7b45, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &517035333
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,7 +4661,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676110616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f67510e95227d0f42a1c0be6d9243709, type: 3}
   m_Name: 
@@ -4627,8 +4669,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 676110618}
   waves:
   - enemies:
-    - {fileID: 2812528639127695424, guid: 36558a9bf9efaa9458b04bffe42748d2, type: 3}
-    - {fileID: 2812528639127695424, guid: 36558a9bf9efaa9458b04bffe42748d2, type: 3}
+    - {fileID: 4347022395993373113, guid: f8b34294de543b2468133149f45b138d, type: 3}
+    - {fileID: 4347022395993373113, guid: f8b34294de543b2468133149f45b138d, type: 3}
     count: 7
     timeBetwenTheSpawnEnemies: 1
   - enemies:
@@ -4651,7 +4693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676110616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.32, y: -1.22, z: -9.694531}
+  m_LocalPosition: {x: 28.32, y: -1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

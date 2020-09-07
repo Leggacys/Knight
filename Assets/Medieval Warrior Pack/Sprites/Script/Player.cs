@@ -130,7 +130,9 @@ public class Player : MonoBehaviour, IHititSolediers
     {
         _anim.SetTrigger("Hit");
         Instantiate(hurtSound, transform.position, transform.rotation);
-        health -=( damage-def);
+        if (def < damage)
+            health += (def - damage);
+
         if(health<=0)
         {
             StartCoroutine(Death());

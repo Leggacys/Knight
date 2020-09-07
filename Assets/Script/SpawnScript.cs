@@ -66,6 +66,9 @@ public class SpawnScript : MonoBehaviour
             yield return new WaitForSeconds(_wave.timeBetwenTheSpawnEnemies);
         }
 
+
+        
+
         _finishgWave = !_finishgWave;
     }
 }

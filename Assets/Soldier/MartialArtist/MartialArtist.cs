@@ -60,8 +60,12 @@ public class MartialArtist : Soldier,IHititSolediers
         if(health<=0)
         {
             _anim.SetTrigger("Death");
-            Destroy(gameObject, 0.7f);
         }
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
     }
     public void Touched()
     {

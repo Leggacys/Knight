@@ -12,9 +12,60 @@ EditorBuildSettings:
     path: Assets/Scenes/TravelScene.unity
     guid: f4d6a8e9ebb6694408c932d351e77223
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/FairScene/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Forest.unity
+    path: Assets/Scenes/FairScene/SampleScene 1.unity
+    guid: b4222fe9054a31647a80d12fa72b4f18
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 2.unity
+    guid: 8ea454aec69db524da60f703fe91841f
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 3.unity
+    guid: 7d813b822cd11c740b5709be7c8c0399
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 4.unity
+    guid: ee969bf4c7932e4428555e9bc4e0f199
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 5.unity
+    guid: 29814d1aad1a274499745179ffb12a4e
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 6.unity
+    guid: a5051205030c630408448e92dcc9f7a9
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 7.unity
+    guid: 700095af4866ed849b27108faf120ba3
+  - enabled: 1
+    path: Assets/Scenes/FairScene/SampleScene 8.unity
+    guid: 11ae8a57568c7ea4b84e2156bc2085e8
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest.unity
     guid: 8a53225a16c69c148b875d95092cb867
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 1.unity
+    guid: 77b0159e9fb69844fa6dc530238ca097
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 2.unity
+    guid: 66fcef09ab3b2fc47b94ddd3b610eb65
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 3.unity
+    guid: 879230cf37478474bb9cadb43ee9899e
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 4.unity
+    guid: 38fd7fd5be067134396f029ce73b95e8
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 5.unity
+    guid: 81c3915f2be11c14b872aeba1ae09d45
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 6.unity
+    guid: a119ade266faa8d40bab9a8e8f93d5a4
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 7.unity
+    guid: 511f95b802440ad48849879577e00dce
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 8.unity
+    guid: 4283c3de6afe92841a63fe36d5eec785
+  - enabled: 1
+    path: Assets/Scenes/ForestScene/Forest 9.unity
+    guid: 45eb767920f491349a44872670884530
   m_configObjects: {}

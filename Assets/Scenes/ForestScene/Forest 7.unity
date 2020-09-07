@@ -1389,8 +1389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124.29339, y: -19.475256}
-  m_SizeDelta: {x: 57.7, y: 62.72}
+  m_AnchoredPosition: {x: 0, y: -19.47525}
+  m_SizeDelta: {x: 171.34, y: 62.7}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &283014900
 MonoBehaviour:
@@ -2832,7 +2832,7 @@ PrefabInstance:
     - target: {fileID: 745912732900872116, guid: c72629a267998ec429c2e93837ec617d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.3
+      value: -4.78
       objectReference: {fileID: 0}
     - target: {fileID: 745912732900872116, guid: c72629a267998ec429c2e93837ec617d,
         type: 3}
@@ -2867,7 +2867,7 @@ PrefabInstance:
     - target: {fileID: 745912732900872116, guid: c72629a267998ec429c2e93837ec617d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 745912732900872116, guid: c72629a267998ec429c2e93837ec617d,
         type: 3}
@@ -4468,7 +4468,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912156751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f67510e95227d0f42a1c0be6d9243709, type: 3}
   m_Name: 
@@ -5953,7 +5953,7 @@ PrefabInstance:
     - target: {fileID: 3792797739003359353, guid: 440059131015e2f42ab1705e7228636f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3792797739003359353, guid: 440059131015e2f42ab1705e7228636f,
         type: 3}
@@ -8969,6 +8969,7 @@ GameObject:
   - component: {fileID: 1980925577}
   - component: {fileID: 1980925576}
   - component: {fileID: 1980925579}
+  - component: {fileID: 1980925580}
   m_Layer: 9
   m_Name: Evilspike
   m_TagString: Enemies
@@ -8988,8 +8989,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89611c2e7bf9d434996e8b1a13afc24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  coinDrop: 100
+  HP: 5200
+  coinDrop: 200
 --- !u!212 &1980925577
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9080,6 +9081,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7555234, y: 4.8}
   m_EdgeRadius: 0
+--- !u!114 &1980925580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980925575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60accb51463a71549a3c55fab4c92018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 5831883236805066146, guid: 5a25610968ac7d846bb8c31a4498494c, type: 3}
+  - {fileID: 2097668544546589981, guid: 859760857d84ef94d8d346f205d92719, type: 3}
+  - {fileID: 9064435212438484327, guid: d0157670989a9834eab2e9bf8f359ffd, type: 3}
+  time:
+  - 4
+  - 7
+  numbersOfMonsters: 020000000300000003000000
+  numbersOfSpawnMonsters: 2
+  spawnPosition: {fileID: 912156753}
 --- !u!1 &2024978344
 GameObject:
   m_ObjectHideFlags: 0
