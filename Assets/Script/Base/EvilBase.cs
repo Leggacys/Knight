@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EvilBase : MonoBehaviour, IHitit
 {
@@ -19,9 +20,11 @@ public class EvilBase : MonoBehaviour, IHitit
         HP -= damage;
         if (HP <= 0)
         {
+            PlayerPrefs.SetInt("levelAT", SceneManager.GetActiveScene().buildIndex - 2+1);
             Transport();
             DropCoin();
             Destroy(gameObject);
+            
         }
     }
 

@@ -116,30 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bba499d9569dc5408f5603a1ce62171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetwenTheAtack: 0
-  distance: 0
-  speed: 1
-  health: 0
-  radius: 1.05
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  hitPoint: {fileID: 0}
-  damage: 5
-  sound: {fileID: 0}
-  hitSound: {fileID: 0}
-  _moneyTable: {fileID: 0}
-  coinDrop: 0
-  blod: {fileID: 0}
-  attackRange: 0.9
-  _player: {fileID: 0}
   radius: 1.05
   speed: 1
   layers:
     serializedVersion: 2
     m_Bits: 1280
   damage: 20
-  attackRange: 0.9
+  attackRange: 0.7
 --- !u!61 &1106941545959293704
 BoxCollider2D:
   m_ObjectHideFlags: 0

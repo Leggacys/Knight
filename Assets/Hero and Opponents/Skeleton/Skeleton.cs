@@ -58,7 +58,7 @@ public class Skeleton : Enemy,IHitit
         health -= damage;
         if(health<=0)
         {
-            StartCoroutine(Dead());
+            _anim.SetTrigger("Dead");
             Instantiate(blod, transform.position, transform.rotation);
         }
     }
@@ -74,14 +74,9 @@ public class Skeleton : Enemy,IHitit
         Gizmos.DrawWireSphere(hitPoint.position, radius);
     }
 
-    public IEnumerator Dead()
+   public void Dead()
     {
-        DropCoin();
-        _anim.SetTrigger("Dead");
-        Instantiate(sound, transform.position, transform.rotation);
-        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-
     }
 
     public void DropCoin()

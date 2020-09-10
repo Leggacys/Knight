@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghoul :Enemy
+public class Ghoul:MonoBehaviour
 {
     //Public Varoables
     public float radius;

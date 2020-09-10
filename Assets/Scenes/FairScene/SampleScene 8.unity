@@ -968,22 +968,22 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 172
+      value: 143.5
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 178
+      value: 149.5
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 256
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 256
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
         type: 3}
@@ -3589,7 +3589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 2800
-  coinDrop: 80
+  coinDrop: 100
 --- !u!61 &516662059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3631,7 +3631,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 4347022395993373110, guid: f8b34294de543b2468133149f45b138d, type: 3}
   - {fileID: 4347022395993373110, guid: f8b34294de543b2468133149f45b138d, type: 3}
-  - {fileID: 1106941545959293705, guid: 2602b648c688c2749a967cb2d11fa75b, type: 3}
+  - {fileID: 0}
   time:
   - 2
   - 4
@@ -10238,8 +10238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -183, y: 178}
-  m_SizeDelta: {x: 183.59998, y: 170.29999}
+  m_AnchoredPosition: {x: -145, y: 74}
+  m_SizeDelta: {x: 124.7, y: 115.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496735379
 MonoBehaviour:

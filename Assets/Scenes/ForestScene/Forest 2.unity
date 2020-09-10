@@ -9035,7 +9035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3600
-  coinDrop: 240
+  coinDrop: 120
 --- !u!212 &1980925577
 SpriteRenderer:
   m_ObjectHideFlags: 0

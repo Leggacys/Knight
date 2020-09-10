@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 [System.Serializable]
 public class DataSaved
@@ -28,6 +28,7 @@ public class DataSaved
         _soldierHouses = new Dictionary<string, bool>();
         _status = new Dictionary<string, float>();
         money = 0;
+        PlayerPrefs.SetInt("levelAT", 0);
     }
 
 }
